@@ -58,7 +58,7 @@
             var p = $("<p>").text("Rating: " + results[i].rating);
             var colorImage = $("<img>");
             colorImage.attr("src",results[i].images.fixed_height_still.url);
-            colorImage.attr("data-still",results[i].images.fixed_height.url);
+            colorImage.attr("data-still",results[i].images.fixed_height_still.url);
             colorImage.attr("data-animate",results[i].images.fixed_height.url);
             colorImage.attr("data-state","still");
             colorImage.attr("class","gif");
