@@ -31,7 +31,7 @@
     </form>
         <!-- colors will Get Dumped Here -->
 
-    <div id = gifs-appear-here></div>
+    <div id = "gifs-appear-here"></div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -57,15 +57,28 @@
             var colorDiv = $("<div>");
             var p = $("<p>").text("Rating: " + results[i].rating);
             var colorImage = $("<img>");
-            colorImage.attr("src", results[i].images.fixed_height.url);
+            colorImage.attr("src",results[i].images.fixed_height_still.url);
+            colorImage.attr("data-still",results[i].images.fixed_height.url);
+            colorImage.attr("data-animate",results[i].images.fixed_height.url);
+            colorImage.attr("data-state","still");
+            colorImage.attr("class","gif");
 
             colorDiv.append(p);
             colorDiv.append(colorImage);
             $("#gifs-appear-here").prepend(colorDiv);
-            }
+             }
+            $(".gif").on("click", function() {
+              var state = $(this).attr("data-state");
+               if (state === "still") {
+                   $(this).attr("src", $(this).attr("data-animate"));
+                   $(this).attr("data-state", "animate");
+               } else {
+                  $(this).attr("src", $(this).attr("data-still"));
+                  $(this).attr("data-state", "still");
+               }
+            });
         });
       }
-
       // Function for displaying color data
       function renderButtons() {
         // Deleting the buttons prior to adding new colors
@@ -97,7 +110,8 @@
       });
       // Function for displaying the color info
       // Using $(document).on instead of $(".color").on to add event listeners to dynamically generated elements
-      $(document).on("click", ".color", displayColor);
+      $(document).on("click", ".color", ".gif", displayColor);
+
 
       // Calling the renderButtons function to display the initial buttons
       renderButtons();
