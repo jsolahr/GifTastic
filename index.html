@@ -8,13 +8,13 @@
     <link href="https://fonts.googleapis.com/css?family=Monoton|Red+Hat+Text&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="assets/style.css" media="screen"> 
     <meta charset="UTF-8">
-  <title>Favorite Colors</title>
+  <title>Color Gifs</title>
 </head>
 
 <body>
 
   <div class="container">
-    <h1>Color Search</h1>
+    <h1>Color Gifs</h1>
 
     <!-- Rendered Buttons will get Dumped Here  -->
     <div id="buttons-view"></div>
@@ -27,10 +27,9 @@
       <input id="add-color" type="submit" value="Submit">
     </form>
         <!-- colors will Get Dumped Here -->
-
-    <div id = "gifs-appear-here"></div>
-
-
+  
+        <div id = "gifs-appear-here">
+         
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
       // Initial array of colors
@@ -52,6 +51,7 @@
         
             for (var i = 0; i < results.length; i++) {
             var colorDiv = $("<div>");
+            colorDiv.attr("class","align");
             var p = $("<p>").text("Rating: " + results[i].rating);
             var colorImage = $("<img>");
             colorImage.attr("src",results[i].images.fixed_height_still.url);
