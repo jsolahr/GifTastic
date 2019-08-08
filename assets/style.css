@@ -21,13 +21,12 @@ input {
   margin: 10px;
   text-align: center;
 }
-text{
-    text-align: right;
-}
+
 button{
   background-color: white; 
   color: gray; 
   border: 1px solid gray;
+  font-size: 30px;
 }
 button:hover {
     background-color: gray;
@@ -37,6 +36,7 @@ button:hover {
     background-color: white; 
     color: gray; 
     border: 1px solid gray;
+
   }
   img {
       border: 2px solid white;
