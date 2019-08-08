@@ -1,0 +1,44 @@
+body {
+   background:url("https://s2.best-wallpaper.net/wallpaper/3840x2160/1802/Rainbow-background-wavy-abstraction_3840x2160.jpg");
+   background-size: cover;
+   background-repeat: repeat;
+   padding-top: 15px;
+   color: white;
+}
+h1 {
+    font-size: 100px;
+    text-align: center;
+    color: white;
+    font-family: 'Monoton', cursive;
+    font-weight: bold;
+    background-color: transparent;
+}
+button,
+div,
+form,
+input {
+  font-family: 'Red Hat Text', sans-serif;
+  margin: 10px;
+  text-align: center;
+}
+text{
+    text-align: right;
+}
+button{
+  background-color: white; 
+  color: gray; 
+  border: 1px solid gray;
+}
+button:hover {
+    background-color: gray;
+    color: white;
+  }
+#add-color {
+    background-color: white; 
+    color: gray; 
+    border: 1px solid gray;
+  }
+img {
+    margin: 20px;
+    border: 2px solid white;
+  }
