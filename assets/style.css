@@ -1,7 +1,7 @@
 html body {
    background:url("https://s2.best-wallpaper.net/wallpaper/3840x2160/1802/Rainbow-background-wavy-abstraction_3840x2160.jpg");
    background-size: cover;
-   background-repeat: repeat;
+   background-repeat: no-repeat;
    padding-top: 15px;
    color: white;
 }
