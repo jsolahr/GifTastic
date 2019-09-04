@@ -25,7 +25,6 @@
               colorImage.attr("data-animate",results[i].images.fixed_height.url);
               colorImage.attr("data-state","still");
               colorImage.attr("class","gif");
-
               colorDiv.append(colorImage);
             $("#gifs-appear-here").prepend(colorDiv);
          }
@@ -57,7 +56,6 @@
       a.text(colors[i]);
       // Adding the button to the buttons-view div
       $("#buttons-view").append(a);
-      
     }
   }
   // This function handles events where one button is clicked
@@ -66,14 +64,19 @@
     // This line grabs the input from the textbox
     var color = $("#color-input").val().trim();
     // Adding the color from the textbox to our array
+
+    if(color == ''){
+    }
+    else {
     colors.push(color);
-    // Calling renderButtons which handles the processing of our color array
     renderButtons();
+    }    
+    $("#color-input").val("");
+      // Calling renderButtons which handles the processing of our color array
   });
   // Function for displaying the color info
   // Using $(document).on instead of $(".color").on to add event listeners to dynamically generated elements
   $(document).on("click", "button", displayColor)
-
 
   // Calling the renderButtons function to display the initial buttons
   renderButtons();
