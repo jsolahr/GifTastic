@@ -19,7 +19,6 @@
         for (var i = 0; i < results.length; i++) {
             var colorDiv = $("<div>");
               colorDiv.attr("class","align");
-            var p = $("<p>").text("Rating: " + results[i].rating);
             var colorImage = $("<img>");
               colorImage.attr("src",results[i].images.fixed_height_still.url);
               colorImage.attr("data-still",results[i].images.fixed_height_still.url);
@@ -27,7 +26,6 @@
               colorImage.attr("data-state","still");
               colorImage.attr("class","gif");
 
-              colorDiv.append(p);
               colorDiv.append(colorImage);
             $("#gifs-appear-here").prepend(colorDiv);
          }
