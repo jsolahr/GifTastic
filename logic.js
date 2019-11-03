@@ -1,15 +1,15 @@
 
-// Initial array of colors
-var colors = ["Yellow", "Green", "Blue", "Purple", "Orange", "Red",];
+//Initial Array of Feelings
+var feelings = ["Annoyed", "Happy", "Excited", "Bored", "Curious", "Hungry",];
 
-// Function for dumping the JSON content for each button into the div
-function displayColor() {
+//Function for dumping the JSON content for each button into the div
+function displayEmotion() {
   $("#gifs-appear-here").empty();
 
-  var colors = $(this).attr("data-name");
-  console.log(colors);
+  var feelings = $(this).attr("data-name");
+  console.log(feelings);
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    colors + "&api_key=Wc3mwMWG7RWvkB3BW8I0QDXcB2cz5fQT&limit=8";
+    feelings + "&api_key=Wc3mwMWG7RWvkB3BW8I0QDXcB2cz5fQT&limit=10";
 
   $.ajax({
     url: queryURL,
@@ -18,16 +18,16 @@ function displayColor() {
 
     var results = response.data;
     for (var i = 0; i < results.length; i++) {
-      var colorDiv = $("<div>");
-      colorDiv.attr("class", "align");
-      var colorImage = $("<img>");
-      colorImage.attr("src", results[i].images.fixed_height_still.url);
-      colorImage.attr("data-still", results[i].images.fixed_height_still.url);
-      colorImage.attr("data-animate", results[i].images.fixed_height.url);
-      colorImage.attr("data-state", "still");
-      colorImage.attr("class", "gif");
-      colorDiv.append(colorImage);
-      $("#gifs-appear-here").prepend(colorDiv);
+      var emotionDiv = $("<div>");
+      emotionDiv.attr("class", "align");
+      var emotionImage = $("<img>");
+      emotionImage.attr("src", results[i].images.fixed_height_still.url);
+      emotionImage.attr("data-still", results[i].images.fixed_height_still.url);
+      emotionImage.attr("data-animate", results[i].images.fixed_height.url);
+      emotionImage.attr("data-state", "still");
+      emotionImage.attr("class", "gif");
+      emotionDiv.append(emotionImage);
+      $("#gifs-appear-here").prepend(emotionDiv);
     }
 
     $(".gif").on("click", function () {
@@ -42,48 +42,51 @@ function displayColor() {
     });
   });
 }
-// Function for displaying color data
+// Function for displaying emotion data
 function renderButtons() {
 
-  // Deleting the buttons prior to adding new colors
+  // Deleting the buttons prior to adding new feelings
   $("#buttons-view").empty();
-  // Looping through the array of colors
-  for (var i = 0; i < colors.length; i++) {
-    // Then dynamically generating buttons for each color in the array
+  // Looping through the array of feelings
+  for (var i = 0; i < feelings.length; i++) {
+    // Then dynamically generating buttons for each emotion in the array
     var a = $("<button>");
-    // Adding a class of color to our button
+    // Adding a class of emotion to our button
     a.addClass("btn btn-light");
     // Adding a data-attribute
-    a.attr("data-name", colors[i]);
+    a.attr("data-name", feelings[i]);
     // Providing the initial button text
-    a.text(colors[i]);
+    a.text(feelings[i]);
     // Adding the button to the buttons-view div
     $("#buttons-view").append(a);
   }
 }
 // This function handles events where one button is clicked
-$("#add-color").on("click", function (event) {
+$("#add-emotion").on("click", function (event) {
 
   event.preventDefault();
 
   // This line grabs the input from the textbox
-  var color = $("#color-input").val().trim();
-  // Adding the color from the textbox to our array
+  var emotion = $("#emotion-input").val().trim();
+  $("#emotion-input").val("")
 
-  if (color === '') {
-    alert("Please type in a color!")
+  // Adding the emotion from the textbox to our array
+
+  if (emotion === '') {
+    alert("Please type in a emotion!")
   }
   else {
-    colors.push(color);
+    feelings.push(emotion);
     renderButtons();
+
   }
 
-  //$("#color-input").val("");
-  // Calling renderButtons which handles the processing of our color array
+  //$("#emotion-input").val("");
+  // Calling renderButtons which handles the processing of our emotion array
 });
-// Function for displaying the color info
-// Using $(document).on instead of $(".color").on to add event listeners to dynamically generated elements
-$(document).on("click", "button", displayColor)
+// Function for displaying the emotion info
+// Using $(document).on instead of $(".emotion").on to add event listeners to dynamically generated elements
+$(document).on("click", "button", displayEmotion)
 
 // Calling the renderButtons function to display the initial buttons
 renderButtons();
