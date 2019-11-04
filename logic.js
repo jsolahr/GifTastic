@@ -28,6 +28,7 @@ function displayEmotion() {
       emotionImage.attr("class", "gif");
       emotionDiv.append(emotionImage);
       $("#gifs-appear-here").prepend(emotionDiv);
+      $("p").text(" ");
     }
 //Event listener to animate gifs 
     $(".gif").on("click", function () {
@@ -44,7 +45,6 @@ function displayEmotion() {
 }
 // Function for displaying emotion data
 function renderButtons() {
-
   // Deleting the buttons prior to adding new feelings
   $("#buttons-view").empty();
   // Looping through the array of feelings

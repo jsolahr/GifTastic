@@ -4,13 +4,19 @@ html, body{
   background-size: auto;
 }
 p {
-  font-size: 150px;
-  margin: 0px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+  margin-left:80px;
+  margin-right:80px;
   padding: 0px;
   text-align: center;
   color: black;
-  font-family: 'Covered By Your Grace', cursive;
   background-color: transparent;
+}
+#instruction{
+  margin:0px;
+  font-weight: bold;
+  font-size: 25px;
 }
 button,
 div,
