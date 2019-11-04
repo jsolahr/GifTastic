@@ -1,6 +1,7 @@
-html body {
-  background-color: white;
-  color: black;
+html, body{
+  background: white;
+  background-repeat: auto;
+  background-size: auto;
 }
 p {
   font-size: 150px;
@@ -9,7 +10,8 @@ p {
   text-align: center;
   color: black;
   font-family: 'Covered By Your Grace', cursive;
-  background-color: transparent;
+  background-color: transpa
+  rent;
 }
 button,
 div,
@@ -20,11 +22,21 @@ input {
   margin: 10px;
   text-align: center;
 }
-
+#header {
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 45px;
+  margin: 10px;
+  text-align: center;
+}
+.navbar {
+  background-color: rgb(243, 240, 240);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+}
 button{
   background-color: white; 
   color: gray; 
   border: 1px solid gray;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
 button:hover {
     background-color: gray;
@@ -34,6 +46,7 @@ button:hover {
     background-color: white; 
     color: black; 
     border: 1px solid gray;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
   }
 img {
       border: 2px solid black;
@@ -46,6 +59,15 @@ span {
 }
 .gif {
   background-color: white;
-  box-shadow: 5px 10px 18px #888888;
-  border: 4px solid white;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  border: 3px solid white;
+}
+footer{
+  font-family: 'Covered By Your Grace', cursive;
+  text-align: center;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 10px;
 }

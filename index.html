@@ -3,48 +3,38 @@
 
 <head>
   <meta charset="UTF-8">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css" media="screen">
 
-  <title>Feeling Emojis</title>
-
-  <link rel="shortcut icon" href="/assets/img/favicon_io/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_io/favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon_io/favicon-16x16.png">
-
-  <link rel="manifest" href="/site.webmanifest">
-
+  <title>Emotion Gifs</title>
 
 </head>
 
 <body>
 
-  <p>#My Mood</p>
+  <!--Nav Bar/Search Bar-->
+    <nav class="navbar justify-content-between" >
+        <a class="navbar-brand" id="header">My Mood</a>
+        <form class="form-inline"id="emotion-form">Add Emotion
+          <input class="form-control mr-sm-2" id="emotion-input" type="search" placeholder="Search" aria-label="Search">
+          <input id="add-emotion" class="btn btn-light" type="submit" value="Submit">        </form>
+      </nav>
+
 
   <!-- Rendered Buttons will get Dumped Here  -->
   <div id="buttons-view"></div>
 
-  <form id="emotion-form">
-    <label for="emotion-input" style="color: black">Add Emotion</label>
-    <input type="text" id="emotion-input"><br>
 
-    <!-- Button triggers new emotion to be added -->
-    <input id="add-emotion" class="btn btn-light" type="submit" value="Submit">
-  </form>
   <!-- Emotions will Get Dumped Here -->
-
   <div id="gifs-appear-here"></div>
 
   <br>
   <br>
-
+<footer>Copywright 2019 Jessica Sola</footer>
   <script src="logic.js"></script>
 
 </body>

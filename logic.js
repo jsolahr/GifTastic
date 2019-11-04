@@ -7,15 +7,15 @@ function displayEmotion() {
   $("#gifs-appear-here").empty();
 
   var feelings = $(this).attr("data-name");
-  console.log(feelings);
   var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    feelings + "&api_key=Wc3mwMWG7RWvkB3BW8I0QDXcB2cz5fQT&limit=10";
+    feelings + "&api_key=Wc3mwMWG7RWvkB3BW8I0QDXcB2cz5fQT&limit=14";
 
   $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function (response) {
 
+  //Creating new divs and for-loop for search results
     var results = response.data;
     for (var i = 0; i < results.length; i++) {
       var emotionDiv = $("<div>");
@@ -29,7 +29,7 @@ function displayEmotion() {
       emotionDiv.append(emotionImage);
       $("#gifs-appear-here").prepend(emotionDiv);
     }
-
+//Event listener to animate gifs 
     $(".gif").on("click", function () {
       var state = $(this).attr("data-state");
       if (state === "still") {
@@ -71,20 +71,14 @@ $("#add-emotion").on("click", function (event) {
   $("#emotion-input").val("")
 
   // Adding the emotion from the textbox to our array
-
   if (emotion === '') {
     alert("Please type in a emotion!")
   }
   else {
     feelings.push(emotion);
     renderButtons();
-
   }
-
-  //$("#emotion-input").val("");
-  // Calling renderButtons which handles the processing of our emotion array
 });
-// Function for displaying the emotion info
 // Using $(document).on instead of $(".emotion").on to add event listeners to dynamically generated elements
 $(document).on("click", "button", displayEmotion)
 
