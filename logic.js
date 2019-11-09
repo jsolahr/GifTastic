@@ -1,6 +1,6 @@
 
 //Initial Array of Feelings
-var feelings = ["Annoyed", "Happy", "Excited", "Bored", "Curious", "Hungry",];
+var feelings = ["Annoyed", "Happy", "Excited", "Bored", "Curious", "Shy", "Surprised", "Jealous", "Lazy", "Silly", "Embarrassed"];
 
 //Function for dumping the JSON content for each button into the div
 function displayEmotion() {
