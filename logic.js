@@ -28,7 +28,6 @@ function displayEmotion() {
       emotionImage.attr("class", "gif");
       emotionDiv.append(emotionImage);
       $("#gifs-appear-here").prepend(emotionDiv);
-      $("p").text(" ");
     }
 //Event listener to animate gifs 
     $(".gif").on("click", function () {
@@ -63,7 +62,6 @@ function renderButtons() {
 }
 // This function handles events where one button is clicked
 $("#add-emotion").on("click", function (event) {
-
   event.preventDefault();
 
   // This line grabs the input from the textbox

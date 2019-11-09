@@ -3,10 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bttn.css/0.2.4/bttn.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css" media="screen">
@@ -18,27 +21,26 @@
 <body>
 
   <!--Nav Bar/Search Bar-->
-    <nav class="navbar justify-content-between" >
-        <a class="navbar-brand" id="header">My Mood</a>
-        <form class="form-inline"id="emotion-form">Add Emotion
-          <input class="form-control mr-sm-2" id="emotion-input" type="search" placeholder="Search" aria-label="Search">
-          <input id="add-emotion" class="btn btn-light" type="submit" value="Submit">        </form>
-      </nav>
+  <nav class="navbar justify-content-between">
+    <a class="navbar-brand" id="header">Giphy Mood</a>
+    <!-- <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Instructions</button> -->
 
+    <form class="form-inline" id="emotion-form">Add Emotion
+      <input class="form-control" style="text-align: left" id="emotion-input" type="search" placeholder="" aria-label="Search">
+      <input id="add-emotion" class="btn btn-light" type="submit" value="Submit"> </form>
+  </nav>
 
   <!-- Rendered Buttons will get Dumped Here  -->
   <div id="buttons-view"></div>
- <br>
-  <div class="container">
-      <p id="instruction">Instructions:</p>
-  <p>Click on an "emotion" button to display related Gifs or add a new "emotion" button using the search bar! Click on any Gif to see the animation.</p>
-</div>
+  <br>
+ 
   <!-- Emotions will Get Dumped Here -->
-  <div id="gifs-appear-here"></div>
+    <div id="gifs-appear-here">
+    </div>
 
   <br>
   <br>
-<footer>Copywright 2019 Jessica Sola</footer>
+  <footer>Copywright 2019 Jessica Sola</footer>
   <script src="logic.js"></script>
 
 </body>

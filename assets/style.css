@@ -1,7 +1,9 @@
-html, body{
-  background: white;
-  background-repeat: auto;
-  background-size: auto;
+body {
+  background-image: url("Asset1.png");
+  background-color: rgb(243, 236, 236);
+}
+#header, #emotion-form{
+  color: rgba(255, 249, 249, 0.932);
 }
 p {
   font-family: 'PT Sans', sans-serif;
@@ -10,7 +12,7 @@ p {
   margin-right:80px;
   padding: 0px;
   text-align: center;
-  color: black;
+  color: white;
   background-color: transparent;
 }
 #instruction{
@@ -22,57 +24,61 @@ button,
 div,
 form,
 input {
-  font-family: 'Covered By Your Grace', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 20px;
   margin: 10px;
   text-align: center;
 }
 #header {
-  font-family: 'Covered By Your Grace', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 45px;
   margin: 10px;
   text-align: center;
 }
 .navbar {
-  background-color: white;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  background: linear-gradient(90deg, #4b6cb7 0%, #233b6b 100%);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 4px 2px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
-button{
-  background-color: white; 
-  color: gray; 
+button {
   border: 1px solid gray;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
-button:hover {
-    background-color: gray;
-    color: white;
+.btn{
+  background-color: rgb(11, 18, 87); 
+  color: white; 
+  border: none;
+}
+.btn:hover {
+    background-color: rgb(134, 149, 168);
+    color: rgb(243, 223, 223);
   }
 #add-emotion {
-    background-color: white; 
-    color: black; 
-    border: 1px solid gray;
+    background-color: rgb(4, 12, 87); 
+    color: white;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
   }
-img {
-      border: 2px solid black;
+#add-emotion:hover {
+    background-color: rgb(87, 111, 143);
+    color: white;
+    border: none;
   }
+img{
+  border-radius: 5px;
+}
 .align {
   display: inline-flex;
 }
-span {
-  color: black;
-}
 .gif {
-  background-color: white;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-  border: 3px solid white;
+  box-shadow: 10px 10px 26px -12px rgba(0,0,0,0.75);
 }
+
 footer{
-  font-family: 'Covered By Your Grace', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
   position: relative;
   left: 0;
   right: 0;
   bottom: 0;
   margin-bottom: 10px;
+  color: grey;
 }
